@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:gravity="center"
+            android:textSize="20dp" />
+
+        <Button
+            android:focusable="false"
+            android:layout_width="80dp"
+            android:text="选择"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/selector"
+            android:id="@+id/bt_select"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:text="删除"
+        android:id="@+id/tv_del"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:background="@drawable/tv"/>
+</LinearLayout>

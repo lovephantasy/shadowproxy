@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_new"
+        android:showAsAction="never"
+        android:title="新建" />
+    <item
+        android:id="@+id/menu_input"
+        android:showAsAction="never"
+        android:title="导入"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_refresh"
+        android:showAsAction="never"
+        android:title="刷新" />
+
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:summary="将UDP数据转发至代理服务器"
+        android:title="UDP转发"
+        android:id="@+id/pf_proxyudp"
+        android:icon="@mipmap/ic_launcher_round"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:summary="将UDP伪装成TCP转发至代理服务器"
+        android:title="UDP伪装"
+        android:id="@+id/pf_httpudp"
+        android:icon="@mipmap/ic_launcher_round"
+        android:enabled="false"/>
+    <CheckBoxPreference
+        android:summary="DNS与UDP分开代理"
+        android:title="DNS分离"
+        android:id="@+id/pf_dnssplit"
+        android:icon="@mipmap/ic_launcher_round"
+        android:enabled="false"/>
+    <Preference
+        android:summary="指定代理APP"
+        android:title="分应用代理"
+        android:id="@+id/pf_bypass"
+        android:icon="@mipmap/ic_launcher_round"/>
+
+</PreferenceScreen>

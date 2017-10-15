@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">shadowproxy</string>
+    <string name="firstrun">firstrun</string>
+    <string name="dns">119.29.29.29</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.shadowproxy.ConfigManagerActivity">
+
+    <android.shadowproxy.ListViewEx.ListViewEx
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/background"
+        android:dividerHeight="8dp"
+        android:id="@+id/lv_cm">
+    </android.shadowproxy.ListViewEx.ListViewEx>
+</LinearLayout>

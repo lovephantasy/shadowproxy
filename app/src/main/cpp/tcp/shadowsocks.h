@@ -1,0 +1,8 @@
+//
+// Created by lovefantasy on 17-8-12.
+//
+
+#ifndef SHADOWPROXY_SHADOWSOCKS_H
+#define SHADOWPROXY_SHADOWSOCKS_H
+
+#endif //SHADOWPROXY_SHADOWSOCKS_H

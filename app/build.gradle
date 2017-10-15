@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "android.shadowproxy"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 17
+
+        versionName "0.1.22"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "core"
+        }
+        externalNativeBuild {
+            cmake {
+                abiFilters "armeabi", "arm64-v8a", "armeabi-v7a"
+                cppFlags "-std=c++11"
+            }
+        }
+        versionNameSuffix 'beta'
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output ->
+                    def file = output.outputFile
+                    output.outputFile = new File(file.parent, file.name.replace("app-release.apk", defaultConfig.applicationId + "-" + defaultConfig.versionName + "-" + defaultConfig.versionNameSuffix + ".apk"))
+            }
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+/*    signingConigs{
+        debug{
+            v1SigningEabled true
+            v2SigningEabled true
+        }
+        release{
+            v1SigningEabled true
+            v2SigningEabled true
+        }
+    }*/
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    productFlavors {
+
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+}
